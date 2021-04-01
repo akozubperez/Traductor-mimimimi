@@ -1,0 +1,38 @@
+<html>
+<head>
+</head>
+<body>
+<div>
+<div>Traductor Mimimi...</div>
+
+<input type="text" name="texto" id="texto">
+
+<button onclick="javascript:traducir()">Traducir</button>
+
+<div id="texto-traducido">
+
+</div>
+</div>
+<script>
+const traducir = () => {
+	let texto = document.getElementById('texto').value;
+	texto = texto.replaceAll("u", "i");
+	texto = texto.replaceAll("U", "I");
+	texto = texto.replaceAll("qie", "qui");
+	texto = texto.replaceAll("ca", "qui");
+	texto = texto.replaceAll("co", "qui");
+	texto = texto.replaceAll("cu", "qui");
+	texto = texto.replaceAll("ce", "qui");
+	texto = texto.replaceAll("A", "I");
+	texto = texto.replaceAll("E", "I");
+	texto = texto.replaceAll("O", "I");
+	texto = texto.replaceAll("a", "i");
+	texto = texto.replaceAll("e", "i");
+	texto = texto.replaceAll("o", "i");
+	document.getElementById('texto-traducido').innerHTML = texto;
+}
+
+
+</script>
+</body>
+</html>
